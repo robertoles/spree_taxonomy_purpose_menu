@@ -1,0 +1,32 @@
+<div id="categories" class="row">
+  <% Spree::Taxon.menu.children.each do |category| %>
+    <div class="category nav-item <%= category.style %>">
+      <div class="nav-button">
+        <%= link_to(category.name, seo_url(category)) %>
+        <div class="arrow-up"></div>
+      </div>
+      <div class="nav-view">
+        <% category.children.in_groups_of(4) do |group| %>
+          <div class="section-row row">
+            <% group.each do |child| %>
+              <div class="section-wrapper">
+                <div class="section">
+                  <% if child %>
+                    <div class="section-title">
+                      <%= link_to(child.name, seo_url(child)) %>
+                    </div>
+                    <div class="section-items">
+                      <% child.children.each do |grandchild| %>
+                        <%= link_to(grandchild.name, seo_url(grandchild)) %>
+                      <% end %>
+                    </div>
+                  <% end %>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>
