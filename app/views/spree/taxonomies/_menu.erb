@@ -1,5 +1,5 @@
 <div id="categories" class="row">
-  <% Spree::Taxon.menu.children.each do |category| %>
+  <% Spree::Taxon.menu_items.each do |category| %>
     <div class="category nav-item <%= category.style %>">
       <div class="nav-button">
         <%= link_to(category.name, seo_url(category)) %>
