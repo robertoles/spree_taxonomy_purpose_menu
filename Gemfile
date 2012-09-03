@@ -1,9 +1,5 @@
 source 'http://rubygems.org'
 
-if RUBY_VERSION < '1.9'
-  gem 'ruby-debug'
-else
-  gem 'debugger'
-end
+gem  'spree_taxonomy_purpose', git: 'git://github.com/robertoles/spree_taxonomy_purpose.git'
 
 gemspec
