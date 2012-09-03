@@ -1,0 +1,5 @@
+<%= f.field_container :hide_from_menu do %>
+  <%= f.label :hide_from_menu, t(:hide_from_menu) %><br />
+  <%= error_message_on :taxon, :hide_from_menu, :class => 'fullwidth title' %>
+  <%= f.check_box :hide_from_menu %>
+<% end %>
