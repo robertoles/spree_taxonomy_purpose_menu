@@ -2,7 +2,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_taxonomy_purpose_menu'
-  s.version     = '1.2.2'
+  s.version     = '1.2.3'
   s.summary     = 'Allows a taxonomy to be used as a single horizontal menu'
   s.description = 'Creates a mega menu based on a single taxonomy taxon structure'
   s.required_ruby_version = '>= 1.9.2'
